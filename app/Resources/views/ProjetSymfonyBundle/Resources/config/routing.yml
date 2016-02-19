@@ -1,0 +1,15 @@
+oc_ProjetSymfony_home:
+    path:      /platform
+    defaults:  { _controller: ProjetSymfonyBundle:User:index }
+
+oc_ProjetSymfony_view:
+    path:      /platform/advert/{id}
+    defaults:  { _controller: ProjetSymfonyBundle:Advert:view }
+
+oc_ProjetSymfony_add:
+    path:      /platform/add
+    defaults:  { _controller: ProjetSymfonyBundle:Advert:add }
+
+oc_ProjetSymfony_slug:
+    path:      /platform/{year}/{slug}.{format}
+    defaults:  { _controller: ProjetSymfonyBundle:Advert:viewSlug }
