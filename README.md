@@ -1,6 +1,7 @@
 LeCoinDesPious
 
 Bienvenue dans le coin des pious
+Un Projet Développé par Pelluard, Boutet et Shan
 
 Symfony Standard Edition
 ========================
