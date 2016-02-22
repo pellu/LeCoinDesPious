@@ -6,7 +6,7 @@ user:
 article:
     resource: "@ArticleBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /article
 
 app:
     resource: "@AppBundle/Controller/"

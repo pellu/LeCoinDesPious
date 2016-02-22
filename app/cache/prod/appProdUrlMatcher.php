@@ -37,7 +37,7 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         }
 
         // article_default_index
-        if (rtrim($pathinfo, '/') === '') {
+        if (rtrim($pathinfo, '/') === '/article') {
             if (substr($pathinfo, -1) !== '/') {
                 return $this->redirect($pathinfo.'/', 'article_default_index');
             }
