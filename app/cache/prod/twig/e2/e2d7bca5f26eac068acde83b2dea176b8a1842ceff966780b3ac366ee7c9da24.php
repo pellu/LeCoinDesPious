@@ -23,7 +23,6 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
     <link href=\"http://localhost/LeCoinDesPious/web/css/style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <script type=\"application/x-javascript\"> addEventListener(\"load\", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    </script>
     <script src=\"http://localhost/LeCoinDesPious/web/js/jquery.min.js\"></script>
     <!-- end nav -->
     <script src=\"http://localhost/LeCoinDesPious/web/js/login.js\"></script>
@@ -32,7 +31,7 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
     <!-- bxSlider Javascript file -->
     <script src=\"http://localhost/LeCoinDesPious/web/js/jquery.bxslider.min.js\"></script>
     <!-- bxSlider CSS file -->
-    <link href=\"http://localhost/LeCoinDesPious/web/jquery.bxslider.css\" rel=\"stylesheet\" />
+    <link href=\"http://localhost/LeCoinDesPious/web/css/jquery.bxslider.css\" rel=\"stylesheet\" />
     <script>
         \$(document).ready(function(){
             \$('.bxslider').bxSlider();
@@ -46,7 +45,11 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
     <script src=\"http://localhost/LeCoinDesPious/web/js/clndr.js\"></script>
     <script src=\"http://localhost/LeCoinDesPious/web/js/site.js\"></script>
     <!----End Calender -------->
-</head>";
+</head>
+<body>
+";
+        // line 32
+        $this->loadTemplate("::menu.html.twig", "::header.html.twig", 32)->display($context);
     }
 
     public function getTemplateName()
@@ -54,9 +57,14 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
         return "::header.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  52 => 32,  19 => 1,);
     }
 }
 /* <!DOCTYPE HTML>*/
@@ -66,7 +74,6 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
 /*     <link href="http://localhost/LeCoinDesPious/web/css/style.css" rel="stylesheet" type="text/css" media="all" />*/
 /*     <meta name="viewport" content="width=device-width, initial-scale=1">*/
 /*     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>*/
-/*     </script>*/
 /*     <script src="http://localhost/LeCoinDesPious/web/js/jquery.min.js"></script>*/
 /*     <!-- end nav -->*/
 /*     <script src="http://localhost/LeCoinDesPious/web/js/login.js"></script>*/
@@ -75,7 +82,7 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
 /*     <!-- bxSlider Javascript file -->*/
 /*     <script src="http://localhost/LeCoinDesPious/web/js/jquery.bxslider.min.js"></script>*/
 /*     <!-- bxSlider CSS file -->*/
-/*     <link href="http://localhost/LeCoinDesPious/web/jquery.bxslider.css" rel="stylesheet" />*/
+/*     <link href="http://localhost/LeCoinDesPious/web/css/jquery.bxslider.css" rel="stylesheet" />*/
 /*     <script>*/
 /*         $(document).ready(function(){*/
 /*             $('.bxslider').bxSlider();*/
@@ -90,3 +97,5 @@ class __TwigTemplate_b7a40e2bdc6001aabe485fdf783f27692c21458e456eba2a828d17114d7
 /*     <script src="http://localhost/LeCoinDesPious/web/js/site.js"></script>*/
 /*     <!----End Calender -------->*/
 /* </head>*/
+/* <body>*/
+/* {% include "::menu.html.twig" %}*/

@@ -373,7 +373,7 @@ nav a#pull:hover .clearfix ul{
 .web_search{
 	position: relative;
 	float: left;
-	width: 26%;
+	width: 24%;
 }
 .srch{
 	position: absolute;
@@ -477,7 +477,7 @@ nav a#pull:hover .clearfix ul{
   color: #FFF;
 	font-size: 1em;
 	line-height: 65px;
-	padding: 0px 44.2px;
+	padding: 0px 30px;
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
 	-ms-transition: all 0.5s ease-out;
@@ -639,7 +639,7 @@ nav a#pull:hover .clearfix ul{
     padding:0;
 }
 fieldset#body {
-    padding: 10px 20px 40px;
+    padding: 10px 20px 0px;
     margin:0;
 }
 #loginForm #checkbox {
@@ -662,7 +662,7 @@ fieldset#body {
     margin:0 0 6px 0;
 }
 #body label i a{
-	font-size: 1em;
+	font-size: 0.95em;
 	color: #fff;
 	text-transform: uppercase;
 	transition:0.5s all;
@@ -737,11 +737,11 @@ input:focus {
 	transition-duration: .5s;
 }
 .web_search input[type="text"]{
-	padding: 1.26em .5em;
+	padding: 1.40em .5em;
 	outline: none;
 	font-family: 'open_sansregular';
 	border: none;
-	width: 80%;
+	width: 75%;
 	background: none;
 	font-size: 1em;
 	color: #35B5EB;
@@ -2191,7 +2191,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width:80%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 44.66px;
+		padding: 0px 30px;
 	}
 	.news-tabs li {
 		width: 49.85%;
@@ -2209,7 +2209,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width:84%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 44.3px;
+		padding: 0px 30px;
 	}
 	.news-tabs li {
 		width: 49.85%;
@@ -2227,7 +2227,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width:90%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 44.44px;
+		padding: 0px 28px;
 	}
 	.news-tabs li {
 		width: 49.85%;
@@ -2251,7 +2251,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width: 62.484%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 43.66px;
+		padding: 0px 25px;
 	}
 	.cssmenu > ul > li:nth-child(2){
 		display:none;
@@ -2270,7 +2270,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width: 98%;
 	}
 	.web_search {
-		width:25%;
+		width:22%;
 	}
 	.login_box {
 	}
@@ -2349,7 +2349,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width: 75%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 42.99px;
+		padding: 0px 30px;
 	}
 	.cssmenu > ul > li:nth-child(2),.cssmenu > ul > li:nth-child(5){
 		display:none;
@@ -2509,7 +2509,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width: 75%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 43.1px
+		padding: 0px 25px
 	}
 	#loginForm input {
 		width: 93%;
@@ -2679,7 +2679,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width: 72%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 43.1px
+		padding: 0px 30px
 	}
 	#loginForm input {
 		width: 93%;
@@ -2896,7 +2896,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 		width: 79%;
 	}
 	.cssmenu > ul > li > a {
-		padding: 0px 52.1px;
+		padding: 0px 20px;
 	}
 	#loginForm input {
 		width: 93%;
@@ -3111,4 +3111,3 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 	.news-tabs a {
 		padding: 16px 40px;
 	}
-}	

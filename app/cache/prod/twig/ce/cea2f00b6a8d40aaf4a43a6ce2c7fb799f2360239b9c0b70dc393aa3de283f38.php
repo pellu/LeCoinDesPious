@@ -16,157 +16,7 @@ class __TwigTemplate_c384ea0dd5bff6baf790eb97d9102837fefe12bb820e0a41e82fe3a6715
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<body>
-<!---strat-wrap---->
-<div class=\"wrap\">
-    <!---start-top-nav---->
-    <div class=\"top-nav\">
-        <div class=\"menu1\">
-            <ul class=\"menu2\">
-                <li>
-                    <a  class=\"nav-icon\" href=\"\"> </a>
-                    <ul>
-                        <li>
-                            <a class=\"root-nav1\" href=\"\">Business</a>
-                            <ul>
-                                <li><a href=\"\">Item 11</a></li>
-
-                                <li><a href=\"\">Item 12</a></li>
-                                <li><a href=\"\">Item 13</a></li>
-                                <li><a href=\"\">Item 14</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class=\"root-nav2\" href=\"\">Technology</a>
-                            <ul>
-                                <li><a href=\"\">Item 21</a></li>
-                                <li><a href=\"\">Item 22</a></li>
-                                <li><a href=\"\">Item 23</a></li>
-                                <li><a href=\"\">Item 24</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class=\"root-nav3\" href=\"\">Travel</a>
-                            <ul>
-                                <li><a href=\"\">Item 31</a></li>
-                                <li><a href=\"\">Item 32</a></li>
-                                <li><a href=\"\">Item 33</a></li>
-                                <li><a href=\"\">Item 34</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class=\"root-nav4\" href=\"\">Entertainment</a>
-                            <ul>
-                                <li><a href=\"\">Item 41</a></li>
-                                <li><a href=\"\">Item 42</a></li>
-                                <li><a href=\"\">Item 43</a></li>
-                                <li><a href=\"\">Item 44</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class=\"top-nav_right\">
-            <div class=\"menu\">
-                <!-- start top-nav-->
-                <div class=\"cssmenu\">
-                    <ul>
-                        <li><a href=\"#\"><span>Home</span></a></li>
-                        <li><a href=\"#\"><span>About</span></a></li>
-                        <li  class=\"has-sub\"><a href=\"#\"><span>Shope</span></a>
-                            <ul>
-                                <li class=\"has-sub\"><a href=\"#\"><span>Lorem Ipsum</span></a></li>
-                                <li class=\"has-sub\"><a href=\"#\"><span>Lorem Ipsum</span></a></li>
-                                <li class=\"has-sub\"><a href=\"#\"><span>Lorem Ipsum</span></a></li>
-                                <li class=\"has-sub\"><a href=\"#\"><span>Lorem Ipsum</span></a></li>
-                                <li class=\"has-sub\"><a href=\"#\"><span>Lorem Ipsum</span></a></li>
-                            </ul>
-                        </li>
-                        <li class=\"last active\"><a href=\"#\"><span>Blog</span></a></li>
-                        <li class=\"last\"><a href=\"#\"><span>Contact</span></a></li>
-                    </ul>
-                </div>
-                <div class=\"clear\"></div>
-            </div>
-            <!-- start search-->
-            <!-- start social icons -->
-            <div class=\"soc_right\">
-
-            </div>
-        </div>
-        <div class=\"web_search\">
-            <form>
-                <input type=\"text\" value=\"Search..\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Search..';}\"><input type=\"submit\" value=\" \" />
-            </form>
-        </div>
-        <!-- start login_box -->
-        <div class=\"login_box\">
-            <div id=\"loginContainer\">
-                <a id=\"loginButton\" class=\"\"><span></span></a>
-                <div id=\"loginBox\" style=\"display: none;\">
-                    <form id=\"loginForm\">
-                        <fieldset id=\"body\">
-                            <fieldset>
-                                <input type=\"text\"   name=\"email\" id=\"email\" value=\"Username\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Username';}\">
-                                <input type=\"text\"  name=\"password\" id=\"password\" value=\"Password\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Password';}\">
-                            </fieldset>
-                            <input type=\"submit\" id=\"login\" value=\"Sign in\">
-                            <label for=\"checkbox\"><i><a href=\"\">Lost Password ?</a></i></label>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-            <div class=\"clear\"></div>
-        </div>
-        <div class=\"clear\"></div>
-    </div>
-    <!---start-top-nav2---->
-    <!---->
-    <!--<div class=\"top-nav2\">
-        <ul class=\"menu3\">
-            <li class=\"active\">
-                <a href=\"\">
-                    <span> </span>
-                    <span class=\"arrow\"> </span>
-                </a>
-            </li>
-            <li>
-                <a href=\"\">
-                    <span>Level 2</span>
-                    <span class=\"arrow\"> </span>
-                </a>
-            </li>
-            <li>
-                <a href=\"\">
-                    <span>Level 3</span>
-                    <span class=\"arrow\"> </span>
-                </a>
-            </li>
-            <li>
-                <a href=\"\">
-                    <span>Level 4</span>
-                    <span class=\"arrow\"> </span>
-                </a>
-            </li>
-            <li>
-                <a href=\"\">
-                    <span>Level 5</span>
-                    <span class=\"arrow\"> </span>
-                </a>
-            </li>
-            <li>
-                <a href=\"\">
-                    <span>Level 6</span>
-                </a>
-            </li>
-            <div class=\"clear\"> </div>
-
-        </ul>
-    </div>
-        <!---//End-top-nav2---->
-    <div class=\"clear\"> </div>
-    <!---start-subscribe-box---->
+        echo "<!---start-subscribe-box---->
     <!---start-grids-slider---->
     <div class=\"grids-slider\">
         <div class=\"grids-slider-grid-row1-slider\">
@@ -271,7 +121,7 @@ class __TwigTemplate_c384ea0dd5bff6baf790eb97d9102837fefe12bb820e0a41e82fe3a6715
                         </ul>
                     </div>
                     <!---//Social Tabs//----->
-                    <input class=\"org subs\" type=\"button\" value=\"Inscription\">
+                    <a href=\"http://localhost/LeCoinDesPious/web/register\"><input class=\"org subs\" type=\"button\" value=\"Inscription\"></a>
                     <div class=\"tabs-right\">
                         <ul class=\"news-tabs\">
                             <li><a href=\"#tab1\" class=\"active\">Popular</a></li>
@@ -747,14 +597,7 @@ class __TwigTemplate_c384ea0dd5bff6baf790eb97d9102837fefe12bb820e0a41e82fe3a6715
                 <!-- end comment -->
 
                 <!-- No use -->
-                <!---start-copy-right---->
-                <div class=\"copy-right\">
-                    <p>Template By <a href=\"http://w3layouts.com/\">W3layouts</a></p>
-                </div>
-                <!---END-copy-right---->
-        </div>
-        <!---//End-wrap---->
-</body>";
+                <!---start-copy-right---->";
     }
 
     public function getTemplateName()
@@ -767,157 +610,7 @@ class __TwigTemplate_c384ea0dd5bff6baf790eb97d9102837fefe12bb820e0a41e82fe3a6715
         return array (  19 => 1,);
     }
 }
-/* <body>*/
-/* <!---strat-wrap---->*/
-/* <div class="wrap">*/
-/*     <!---start-top-nav---->*/
-/*     <div class="top-nav">*/
-/*         <div class="menu1">*/
-/*             <ul class="menu2">*/
-/*                 <li>*/
-/*                     <a  class="nav-icon" href=""> </a>*/
-/*                     <ul>*/
-/*                         <li>*/
-/*                             <a class="root-nav1" href="">Business</a>*/
-/*                             <ul>*/
-/*                                 <li><a href="">Item 11</a></li>*/
-/* */
-/*                                 <li><a href="">Item 12</a></li>*/
-/*                                 <li><a href="">Item 13</a></li>*/
-/*                                 <li><a href="">Item 14</a></li>*/
-/*                             </ul>*/
-/*                         </li>*/
-/*                         <li>*/
-/*                             <a class="root-nav2" href="">Technology</a>*/
-/*                             <ul>*/
-/*                                 <li><a href="">Item 21</a></li>*/
-/*                                 <li><a href="">Item 22</a></li>*/
-/*                                 <li><a href="">Item 23</a></li>*/
-/*                                 <li><a href="">Item 24</a></li>*/
-/*                             </ul>*/
-/*                         </li>*/
-/*                         <li>*/
-/*                             <a class="root-nav3" href="">Travel</a>*/
-/*                             <ul>*/
-/*                                 <li><a href="">Item 31</a></li>*/
-/*                                 <li><a href="">Item 32</a></li>*/
-/*                                 <li><a href="">Item 33</a></li>*/
-/*                                 <li><a href="">Item 34</a></li>*/
-/*                             </ul>*/
-/*                         </li>*/
-/*                         <li>*/
-/*                             <a class="root-nav4" href="">Entertainment</a>*/
-/*                             <ul>*/
-/*                                 <li><a href="">Item 41</a></li>*/
-/*                                 <li><a href="">Item 42</a></li>*/
-/*                                 <li><a href="">Item 43</a></li>*/
-/*                                 <li><a href="">Item 44</a></li>*/
-/*                             </ul>*/
-/*                         </li>*/
-/*                     </ul>*/
-/*                 </li>*/
-/*             </ul>*/
-/*         </div>*/
-/*         <div class="top-nav_right">*/
-/*             <div class="menu">*/
-/*                 <!-- start top-nav-->*/
-/*                 <div class="cssmenu">*/
-/*                     <ul>*/
-/*                         <li><a href="#"><span>Home</span></a></li>*/
-/*                         <li><a href="#"><span>About</span></a></li>*/
-/*                         <li  class="has-sub"><a href="#"><span>Shope</span></a>*/
-/*                             <ul>*/
-/*                                 <li class="has-sub"><a href="#"><span>Lorem Ipsum</span></a></li>*/
-/*                                 <li class="has-sub"><a href="#"><span>Lorem Ipsum</span></a></li>*/
-/*                                 <li class="has-sub"><a href="#"><span>Lorem Ipsum</span></a></li>*/
-/*                                 <li class="has-sub"><a href="#"><span>Lorem Ipsum</span></a></li>*/
-/*                                 <li class="has-sub"><a href="#"><span>Lorem Ipsum</span></a></li>*/
-/*                             </ul>*/
-/*                         </li>*/
-/*                         <li class="last active"><a href="#"><span>Blog</span></a></li>*/
-/*                         <li class="last"><a href="#"><span>Contact</span></a></li>*/
-/*                     </ul>*/
-/*                 </div>*/
-/*                 <div class="clear"></div>*/
-/*             </div>*/
-/*             <!-- start search-->*/
-/*             <!-- start social icons -->*/
-/*             <div class="soc_right">*/
-/* */
-/*             </div>*/
-/*         </div>*/
-/*         <div class="web_search">*/
-/*             <form>*/
-/*                 <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"><input type="submit" value=" " />*/
-/*             </form>*/
-/*         </div>*/
-/*         <!-- start login_box -->*/
-/*         <div class="login_box">*/
-/*             <div id="loginContainer">*/
-/*                 <a id="loginButton" class=""><span></span></a>*/
-/*                 <div id="loginBox" style="display: none;">*/
-/*                     <form id="loginForm">*/
-/*                         <fieldset id="body">*/
-/*                             <fieldset>*/
-/*                                 <input type="text"   name="email" id="email" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">*/
-/*                                 <input type="text"  name="password" id="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">*/
-/*                             </fieldset>*/
-/*                             <input type="submit" id="login" value="Sign in">*/
-/*                             <label for="checkbox"><i><a href="">Lost Password ?</a></i></label>*/
-/*                         </fieldset>*/
-/*                     </form>*/
-/*                 </div>*/
-/*             </div>*/
-/*             <div class="clear"></div>*/
-/*         </div>*/
-/*         <div class="clear"></div>*/
-/*     </div>*/
-/*     <!---start-top-nav2---->*/
-/*     <!---->*/
-/*     <!--<div class="top-nav2">*/
-/*         <ul class="menu3">*/
-/*             <li class="active">*/
-/*                 <a href="">*/
-/*                     <span> </span>*/
-/*                     <span class="arrow"> </span>*/
-/*                 </a>*/
-/*             </li>*/
-/*             <li>*/
-/*                 <a href="">*/
-/*                     <span>Level 2</span>*/
-/*                     <span class="arrow"> </span>*/
-/*                 </a>*/
-/*             </li>*/
-/*             <li>*/
-/*                 <a href="">*/
-/*                     <span>Level 3</span>*/
-/*                     <span class="arrow"> </span>*/
-/*                 </a>*/
-/*             </li>*/
-/*             <li>*/
-/*                 <a href="">*/
-/*                     <span>Level 4</span>*/
-/*                     <span class="arrow"> </span>*/
-/*                 </a>*/
-/*             </li>*/
-/*             <li>*/
-/*                 <a href="">*/
-/*                     <span>Level 5</span>*/
-/*                     <span class="arrow"> </span>*/
-/*                 </a>*/
-/*             </li>*/
-/*             <li>*/
-/*                 <a href="">*/
-/*                     <span>Level 6</span>*/
-/*                 </a>*/
-/*             </li>*/
-/*             <div class="clear"> </div>*/
-/* */
-/*         </ul>*/
-/*     </div>*/
-/*         <!---//End-top-nav2---->*/
-/*     <div class="clear"> </div>*/
-/*     <!---start-subscribe-box---->*/
+/* <!---start-subscribe-box---->*/
 /*     <!---start-grids-slider---->*/
 /*     <div class="grids-slider">*/
 /*         <div class="grids-slider-grid-row1-slider">*/
@@ -1022,7 +715,7 @@ class __TwigTemplate_c384ea0dd5bff6baf790eb97d9102837fefe12bb820e0a41e82fe3a6715
 /*                         </ul>*/
 /*                     </div>*/
 /*                     <!---//Social Tabs//----->*/
-/*                     <input class="org subs" type="button" value="Inscription">*/
+/*                     <a href="http://localhost/LeCoinDesPious/web/register"><input class="org subs" type="button" value="Inscription"></a>*/
 /*                     <div class="tabs-right">*/
 /*                         <ul class="news-tabs">*/
 /*                             <li><a href="#tab1" class="active">Popular</a></li>*/
@@ -1499,10 +1192,3 @@ class __TwigTemplate_c384ea0dd5bff6baf790eb97d9102837fefe12bb820e0a41e82fe3a6715
 /* */
 /*                 <!-- No use -->*/
 /*                 <!---start-copy-right---->*/
-/*                 <div class="copy-right">*/
-/*                     <p>Template By <a href="http://w3layouts.com/">W3layouts</a></p>*/
-/*                 </div>*/
-/*                 <!---END-copy-right---->*/
-/*         </div>*/
-/*         <!---//End-wrap---->*/
-/* </body>*/
