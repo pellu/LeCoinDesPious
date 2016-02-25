@@ -43,7 +43,9 @@ img{max-width:100%;}
 
 }
 body{
-	 background: #2C2664; /* Old browsers */
+	 background: url("../images/bkg.jpg"); /* Old browsers */
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	 font-family: 'open_sansregular';
 }
 /*---strat-wrap----*/
