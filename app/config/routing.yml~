@@ -1,19 +1,7 @@
-user:
-    resource: "@UserBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-article:
-    resource: "@ArticleBundle/Controller/"
-    type:     annotation
-    prefix:   /article
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
 # app/config/routing.yml
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+    prefix: /admin
 
 fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
@@ -30,3 +18,18 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+ProjetSymfonyBundle:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix: /
+
+#user:
+#    resource: "@UserBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+article:
+    resource: "@ArticleBundle/Controller/"
+    type:     annotation
+    prefix:   /article
