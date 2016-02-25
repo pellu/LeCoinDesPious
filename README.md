@@ -12,7 +12,8 @@ http://localhost/LeCoinDesPious/web/DesignKit/index.html
 
 Gestion user
 ========================
-Créer la base de donnée ou la mettre à jour php app/console doctrine:schema:update --force
+Créer la base de donnée php app/console doctrine:database:create
+Mettre à jour php app/console doctrine:schema:update --force
 
 Ajouter un user : php app/console fos:user:create
 Mettre un grade : php app/console fos:user:promote {mettre le nom de l'user}, puis ROLE_ADMIN ou ROLE_USER
