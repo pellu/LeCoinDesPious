@@ -43,7 +43,7 @@ img{max-width:100%;}
 
 }
 body{
-	 background: url("../images/bkg.jpg"); /* Old browsers */
+	 background: url("../images/BKG.jpg"); /* Old browsers */
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	 font-family: 'open_sansregular';
