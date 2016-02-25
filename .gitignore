@@ -1,0 +1,5 @@
+.idea
+app/cache
+!app/cache/.gitkeep
+app/logs
+!app/logs/.gitkeep
