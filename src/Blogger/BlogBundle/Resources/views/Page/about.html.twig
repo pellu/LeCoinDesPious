@@ -1,8 +1,5 @@
-{% extends 'BloggerBlogBundle::layout.html.twig' %}
-
-{% block title %}About{% endblock%}
-
-{% block body %}
+{% block fos_user_content %}
+    {% include "::header.html.twig" %}
     <header>
         <h1>About symblog</h1>
     </header>
@@ -17,4 +14,5 @@
             lacus nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
             posuere cubilia Curae.</p>
     </article>
-{% endblock %}
+    {% include "::footer.html.twig" %}
+{% endblock fos_user_content %}

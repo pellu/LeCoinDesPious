@@ -1,1 +1,5 @@
-test
+{% block fos_user_content %}
+    {% include "::header.html.twig" %}
+    Page blog {{ name }}
+    {% include "::footer.html.twig" %}
+{% endblock fos_user_content %}

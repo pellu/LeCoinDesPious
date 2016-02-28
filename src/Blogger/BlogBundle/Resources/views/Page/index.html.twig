@@ -1,6 +1,5 @@
-{# src/Blogger/BlogBundle/Resources/views/Page/index.html.twig #}
-{% extends 'BloggerBlogBundle::layout.html.twig' %}
-
-{% block body %}
+{% block fos_user_content %}
+    {% include "::header.html.twig" %}
     Blog homepage
-{% endblock %}
+    {% include "::footer.html.twig" %}
+{% endblock fos_user_content %}

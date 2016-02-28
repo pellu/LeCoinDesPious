@@ -1,12 +1,12 @@
-{# src/Blogger/BlogBundle/Resources/views/Page/contact.html.twig #}
-{% extends 'BloggerBlogBundle::layout.html.twig' %}
-
-{% block title %}Contact{% endblock%}
-
-{% block body %}
+{% block fos_user_content %}
+    {% include "::header.html.twig" %}
     <header>
         <h1>Contact symblog</h1>
     </header>
 
-    <p>Want to contact symblog?</p>
-{% endblock %}
+    <p>Want to contact Le Coin des Pious?</p>
+
+    Blocage du formulaire <a href="http://keiruaprod.fr/symblog-fr/docs/validateurs-et-formulaires.html#enquirytype">Dispo ici</a>
+
+    {% include "::footer.html.twig" %}
+{% endblock fos_user_content %}
