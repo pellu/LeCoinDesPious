@@ -1,0 +1,14 @@
+
+~~ Après l'ajout d'un bundle :
+php app/console cache:clear
+rm -rf app/cache/*
+
+~~ Ajouter des fichiers :
+git add {url+nomdufichier ou "." pour tout|| enlever les accolades}
+git commit -m "~commentaire facultatif~"
+git push (pour envoyé le commit)
+
+~~~suivre les path de symfony :
+php app/console router:match /login
+
+php app/console router:debug 

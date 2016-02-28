@@ -1,0 +1,26 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+            <li>Bonjour, {{ app.user }}</li>
+        {% else %}
+            
+
+
+Hello World! La connexion fonctionne
+
+<img src="http://piwee.net/wp-content/uploads/2016/01/1-blague-developpeur-classe-css-2.jpg" style="width:300px;">
+
+<a href="http://localhost/LeCoinDesPious/web/logout">Se déconnecter</a>
+{% endif %}
+
+
+    {% include "::header.html.twig" %}
+    {% include "::contenutest.html.twig" %}
+    {% include "::footer.html.twig" %}
+{% endblock fos_user_content %}
