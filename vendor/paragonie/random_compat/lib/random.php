@@ -1,5 +1,6 @@
 <?php
 /**
+<<<<<<< HEAD
  * Random_* Compatibility Library
  * for using the new PHP 7 random_* API in PHP 5 projects
  *
@@ -7,16 +8,32 @@
  *
  * Copyright (c) 2015 Paragon Initiative Enterprises
  *
+=======
+ * Random_* Compatibility Library 
+ * for using the new PHP 7 random_* API in PHP 5 projects
+ * 
+ * The MIT License (MIT)
+ * 
+ * Copyright (c) 2015 Paragon Initiative Enterprises
+ * 
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
+<<<<<<< HEAD
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
  *
+=======
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -29,6 +46,7 @@
 if (!defined('PHP_VERSION_ID')) {
     // This constant was introduced in PHP 5.2.7
     $RandomCompatversion = explode('.', PHP_VERSION);
+<<<<<<< HEAD
     define(
         'PHP_VERSION_ID',
         $RandomCompatversion[0] * 10000
@@ -64,6 +82,33 @@ if (PHP_VERSION_ID < 70000) {
          *   4. COM('CAPICOM.Utilities.1')->GetRandom()
          *   5. openssl_random_pseudo_bytes() (absolute last resort)
          *
+=======
+    define('PHP_VERSION_ID', ($RandomCompatversion[0] * 10000 + $RandomCompatversion[1] * 100 + $RandomCompatversion[2]));
+    $RandomCompatversion = null;
+}
+if (PHP_VERSION_ID < 70000) {
+    if (!defined('RANDOM_COMPAT_READ_BUFFER')) {
+        define('RANDOM_COMPAT_READ_BUFFER', 8);
+    }
+    $RandomCompatDIR = dirname(__FILE__);
+    require_once $RandomCompatDIR.'/byte_safe_strings.php';
+    require_once $RandomCompatDIR.'/cast_to_int.php';
+    require_once $RandomCompatDIR.'/error_polyfill.php';
+    if (!function_exists('random_bytes')) {
+        /**
+         * PHP 5.2.0 - 5.6.x way to implement random_bytes()
+         * 
+         * We use conditional statements here to define the function in accordance
+         * to the operating environment. It's a micro-optimization.
+         * 
+         * In order of preference:
+         *   1. Use libsodium if available.
+         *   2. fread() /dev/urandom if available (never on Windows)
+         *   3. mcrypt_create_iv($bytes, MCRYPT_CREATE_IV)
+         *   4. COM('CAPICOM.Utilities.1')->GetRandom()
+         *   5. openssl_random_pseudo_bytes() (absolute last resort)
+         * 
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
          * See ERRATA.md for our reasoning behind this particular order
          */
         if (extension_loaded('libsodium')) {
@@ -74,6 +119,7 @@ if (PHP_VERSION_ID < 70000) {
                 require_once $RandomCompatDIR.'/random_bytes_libsodium_legacy.php';
             }
         }
+<<<<<<< HEAD
 
         /**
          * Reading directly from /dev/urandom:
@@ -125,11 +171,34 @@ if (PHP_VERSION_ID < 70000) {
             &&
             PHP_VERSION_ID >= 50307
             &&
+=======
+        if (
+            !function_exists('random_bytes') && 
+            DIRECTORY_SEPARATOR === '/' &&
+            @is_readable('/dev/urandom')
+        ) {
+            // DIRECTORY_SEPARATOR === '/' on Unix-like OSes -- this is a fast
+            // way to exclude Windows.
+            // 
+            // Error suppression on is_readable() in case of an open_basedir or 
+            // safe_mode failure. All we care about is whether or not we can 
+            // read it at this point. If the PHP environment is going to panic 
+            // over trying to see if the file can be read in the first place,
+            // that is not helpful to us here.
+            
+            // See random_bytes_dev_urandom.php
+                require_once $RandomCompatDIR.'/random_bytes_dev_urandom.php';
+            }
+        if (
+            !function_exists('random_bytes') &&
+            PHP_VERSION_ID >= 50307 &&
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             extension_loaded('mcrypt')
         ) {
             // See random_bytes_mcrypt.php
             require_once $RandomCompatDIR.'/random_bytes_mcrypt.php';
         }
+<<<<<<< HEAD
 
         if (
             !function_exists('random_bytes')
@@ -143,6 +212,18 @@ if (PHP_VERSION_ID < 70000) {
                 strtolower(ini_get('disable_classes'))
             );
 
+=======
+        if (
+            !function_exists('random_bytes') && 
+            extension_loaded('com_dotnet') &&
+            class_exists('COM')
+        ) {
+            $RandomCompat_disabled_classes = preg_split(
+                '#\s*,\s*#', 
+                strtolower(ini_get('disable_classes'))
+            );
+            
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             if (!in_array('com', $RandomCompat_disabled_classes)) {
                 try {
                     $RandomCompatCOMtest = new COM('CAPICOM.Utilities.1');
@@ -157,6 +238,7 @@ if (PHP_VERSION_ID < 70000) {
             $RandomCompat_disabled_classes = null;
             $RandomCompatCOMtest = null;
         }
+<<<<<<< HEAD
 
         /**
          * openssl_random_pseudo_bytes()
@@ -177,20 +259,41 @@ if (PHP_VERSION_ID < 70000) {
             !function_exists('random_bytes')
             &&
             extension_loaded('openssl')
+=======
+        if (
+            !function_exists('random_bytes') && 
+            extension_loaded('openssl') &&
+            (
+                // Unix-like with PHP >= 5.3.0 or
+                (
+                    DIRECTORY_SEPARATOR === '/' &&
+                    PHP_VERSION_ID >= 50300
+                ) ||
+                // Windows with PHP >= 5.4.1
+                PHP_VERSION_ID >= 50401
+            )
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         ) {
             // See random_bytes_openssl.php
             require_once $RandomCompatDIR.'/random_bytes_openssl.php';
         }
+<<<<<<< HEAD
 
         /**
          * throw new Exception
          */
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         if (!function_exists('random_bytes')) {
             /**
              * We don't have any more options, so let's throw an exception right now
              * and hope the developer won't let it fail silently.
              */
+<<<<<<< HEAD
             function random_bytes($length)
+=======
+            function random_bytes()
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             {
                 throw new Exception(
                     'There is no suitable CSPRNG installed on your system'
@@ -198,10 +301,16 @@ if (PHP_VERSION_ID < 70000) {
             }
         }
     }
+<<<<<<< HEAD
 
     if (!function_exists('random_int')) {
         require_once $RandomCompatDIR.'/random_int.php';
     }
 
+=======
+    if (!function_exists('random_int')) {
+        require_once $RandomCompatDIR.'/random_int.php';
+    }
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     $RandomCompatDIR = null;
 }

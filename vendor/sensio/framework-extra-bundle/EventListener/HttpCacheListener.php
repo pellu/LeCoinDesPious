@@ -17,6 +17,10 @@ use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
+<<<<<<< HEAD
+=======
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 
 /**
  * HttpCacheListener handles HTTP cache headers.

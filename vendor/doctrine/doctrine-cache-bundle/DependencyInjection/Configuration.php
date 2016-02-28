@@ -176,7 +176,10 @@ class Configuration implements ConfigurationInterface
                             ->scalarNode('namespace')->defaultNull()->end()
                             ->scalarNode('type')->defaultNull()->end()
                             ->append($this->addBasicProviderNode('apc'))
+<<<<<<< HEAD
                             ->append($this->addBasicProviderNode('apcu'))
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                             ->append($this->addBasicProviderNode('array'))
                             ->append($this->addBasicProviderNode('void'))
                             ->append($this->addBasicProviderNode('wincache'))
@@ -191,7 +194,10 @@ class Configuration implements ConfigurationInterface
                             ->append($this->addPhpFileNode())
                             ->append($this->addMongoNode())
                             ->append($this->addRedisNode())
+<<<<<<< HEAD
                             ->append($this->addPredisNode())
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                             ->append($this->addRiakNode())
                             ->append($this->addSqlite3Node())
                         ->end()
@@ -286,7 +292,10 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('connection_id')->defaultNull()->end()
                 ->arrayNode('servers')
                 ->useAttributeAsKey('host')
+<<<<<<< HEAD
                 ->normalizeKeys(false)
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                     ->prototype('array')
                         ->beforeNormalization()
                             ->ifTrue(function ($v) {
@@ -329,10 +338,15 @@ class Configuration implements ConfigurationInterface
             ->fixXmlConfig('server')
             ->children()
                 ->scalarNode('connection_id')->defaultNull()->end()
+<<<<<<< HEAD
                 ->scalarNode('persistent_id')->defaultNull()->end()
                 ->arrayNode('servers')
                 ->useAttributeAsKey('host')
                 ->normalizeKeys(false)
+=======
+                ->arrayNode('servers')
+                ->useAttributeAsKey('host')
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                     ->prototype('array')
                         ->beforeNormalization()
                             ->ifTrue(function ($v) {
@@ -384,6 +398,7 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
+<<<<<<< HEAD
      * Build predis node configuration definition
      *
      * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder
@@ -414,6 +429,8 @@ class Configuration implements ConfigurationInterface
     }
 
     /**
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
      * Build riak node configuration definition
      *
      * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder

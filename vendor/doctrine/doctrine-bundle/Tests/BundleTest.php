@@ -41,7 +41,11 @@ class BundleTest extends \PHPUnit_Framework_TestCase
             }
         }
 
+<<<<<<< HEAD
         $this->assertTrue($foundEventListener, 'RegisterEventListenersAndSubscribersPass was not found');
+=======
+        $this->assertTrue($foundEventListener, 'RegisterEventListenersAndSubcribersPass was not found');
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         $this->assertTrue($foundValidation, 'DoctrineValidationPass was not found');
     }
 }

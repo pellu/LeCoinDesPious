@@ -63,7 +63,11 @@ class DoctrineEntityGenerator extends Generator
             throw new \RuntimeException(sprintf('Entity "%s" already exists.', $entityClass));
         }
 
+<<<<<<< HEAD
         $class = new ClassMetadataInfo($entityClass, $config->getNamingStrategy());
+=======
+        $class = new ClassMetadataInfo($entityClass);
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         $class->customRepositoryClassName = str_replace('\\Entity\\', '\\Repository\\', $entityClass).'Repository';
         $class->mapField(array('fieldName' => 'id', 'type' => 'integer', 'id' => true));
         $class->setIdGeneratorType(ClassMetadataInfo::GENERATOR_TYPE_AUTO);

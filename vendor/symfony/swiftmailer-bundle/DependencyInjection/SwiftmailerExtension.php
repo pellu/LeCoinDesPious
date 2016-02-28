@@ -75,6 +75,7 @@ class SwiftmailerExtension extends Extension
             $transport = $mailer['transport'];
         }
 
+<<<<<<< HEAD
         if (null !== $mailer['url']) {
             $parts = parse_url($mailer['url']);
             if (!empty($parts['scheme'])) {
@@ -106,6 +107,8 @@ class SwiftmailerExtension extends Extension
         }
         unset($mailer['url']);
 
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         $container->setParameter(sprintf('swiftmailer.mailer.%s.transport.name', $name), $transport);
 
         if (isset($mailer['disable_delivery']) && $mailer['disable_delivery']) {
@@ -306,15 +309,24 @@ class SwiftmailerExtension extends Extension
 
     protected function configureMailerDeliveryAddress($name, array $mailer, ContainerBuilder $container, $isDefaultMailer = false)
     {
+<<<<<<< HEAD
         if (count($mailer['delivery_addresses']) > 0) {
             $container->setParameter(sprintf('swiftmailer.mailer.%s.single_address', $name), $mailer['delivery_addresses'][0]);
             $container->setParameter(sprintf('swiftmailer.mailer.%s.delivery_addresses', $name), $mailer['delivery_addresses']);
+=======
+        if (isset($mailer['delivery_address']) && $mailer['delivery_address']) {
+            $container->setParameter(sprintf('swiftmailer.mailer.%s.single_address', $name), $mailer['delivery_address']);
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             $container->setParameter(sprintf('swiftmailer.mailer.%s.delivery_whitelist', $name), $mailer['delivery_whitelist']);
             $definitionDecorator = new DefinitionDecorator('swiftmailer.plugin.redirecting.abstract');
             $container
                 ->setDefinition(sprintf('swiftmailer.mailer.%s.plugin.redirecting', $name), $definitionDecorator)
                 ->setArguments(array(
+<<<<<<< HEAD
                     sprintf('%%swiftmailer.mailer.%s.delivery_addresses%%', $name),
+=======
+                    sprintf('%%swiftmailer.mailer.%s.single_address%%', $name),
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                     sprintf('%%swiftmailer.mailer.%s.delivery_whitelist%%', $name),
                 ))
             ;

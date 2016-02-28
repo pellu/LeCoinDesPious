@@ -36,7 +36,10 @@
                 <xsd:element name="mongodb"     type="mongodb_provider"/>
                 <xsd:element name="php-file"    type="phpfile_provider"/>
                 <xsd:element name="redis"       type="redis_provider"/>
+<<<<<<< HEAD
                 <xsd:element name="predis"      type="predis_provider"/>
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 <xsd:element name="riak"        type="riak_provider"/>
                 <xsd:element name="sqlite3"     type="sqlite3_provider"/>
             </xsd:choice>
@@ -52,7 +55,10 @@
             <xsd:element name="server" type="memcached_server" minOccurs="1" maxOccurs="unbounded" />
             <xsd:element name="connection-id" type="xsd:string" minOccurs="0" maxOccurs="1" />
         </xsd:sequence>
+<<<<<<< HEAD
         <xsd:attribute name="persistent-id" type="xsd:string"/>
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         <xsd:attribute name="connection-id" type="xsd:string"/>
     </xsd:complexType>
 
@@ -102,6 +108,7 @@
         <xsd:attribute name="database" type="xsd:unsignedInt" />
     </xsd:complexType>
 
+<<<<<<< HEAD
     <!-- predis -->
     <xsd:complexType name="predis_provider">
         <xsd:sequence>
@@ -127,6 +134,8 @@
         </xsd:sequence>
     </xsd:complexType>
 
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     <!-- couchbase -->
     <xsd:complexType name="couchbase_provider">
         <xsd:sequence>

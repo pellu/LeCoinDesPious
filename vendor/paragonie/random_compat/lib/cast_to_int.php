@@ -37,33 +37,52 @@ if (!function_exists('RandomCompat_intval')) {
      * lose precision, so the <= and => operators might accidentally let a float
      * through.
      * 
+<<<<<<< HEAD
      * @param int|float $number    The number we want to convert to an int
      * @param boolean   $fail_open Set to true to not throw an exception
      * 
      * @return int (or float if $fail_open)
      *
      * @throws TypeError
+=======
+     * @param numeric $number The number we want to convert to an int
+     * @param boolean $fail_open Set to true to not throw an exception
+     * 
+     * @return int (or float if $fail_open)
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
      */
     function RandomCompat_intval($number, $fail_open = false)
     {
         if (is_numeric($number)) {
             $number += 0;
         }
+<<<<<<< HEAD
 
         if (
             is_float($number)
             &&
             $number > ~PHP_INT_MAX
             &&
+=======
+        if (
+            is_float($number) &&
+            $number > ~PHP_INT_MAX &&
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             $number < PHP_INT_MAX
         ) {
             $number = (int) $number;
         }
+<<<<<<< HEAD
 
         if (is_int($number) || $fail_open) {
             return $number;
         }
 
+=======
+        if (is_int($number) || $fail_open) {
+            return $number;
+        }
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         throw new TypeError(
             'Expected an integer.'
         );

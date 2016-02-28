@@ -20,20 +20,26 @@
 
 namespace Doctrine\Bundle\DoctrineCacheBundle\Tests\Functional;
 
+<<<<<<< HEAD
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 /**
  * @group Functional
  * @group Memcached
  */
 class MemcachedCacheTest extends BaseCacheTest
 {
+<<<<<<< HEAD
     public function testPersistentId()
     {
         $cache = $this->createCacheDriver();
         $this->assertEquals('app', $cache->getMemcached()->getPersistentId());
     }
 
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     /**
      * {@inheritDoc}
      */
@@ -50,11 +56,14 @@ class MemcachedCacheTest extends BaseCacheTest
         }
     }
 
+<<<<<<< HEAD
     protected function overrideContainer(ContainerBuilder $container)
     {
         $container->setParameter('doctrine_cache.memcached.connection.class', 'Doctrine\Bundle\DoctrineCacheBundle\Tests\Functional\Fixtures\Memcached');
     }
 
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     /**
      * {@inheritDoc}
      */

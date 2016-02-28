@@ -9,6 +9,7 @@ This component provides functions unavailable in releases prior to PHP 7.0:
 - `random_bytes` and `random_int` (from [paragonie/random_compat](https://github.com/paragonie/random_compat))
 - [`*Error` throwable classes](http://php.net/Error)
 
+<<<<<<< HEAD
 More information can be found in the
 [main Polyfill README](https://github.com/symfony/polyfill/blob/master/README.md).
 
@@ -24,3 +25,12 @@ License
 =======
 
 This library is released under the [MIT license](LICENSE).
+=======
+More information can be found in the 
+[main Polyfill README](https://github.com/symfony/polyfill/blob/master/README.md).
+
+License
+=======
+
+This library is released under the [MIT license](LICENSE).
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5

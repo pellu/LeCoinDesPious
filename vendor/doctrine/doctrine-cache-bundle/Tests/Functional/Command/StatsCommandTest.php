@@ -41,6 +41,7 @@ class StatsCommandTest extends CommandTestCase
         $this->tester->execute(array(
             'cache-name' => $this->cacheName,
         ));
+<<<<<<< HEAD
 
         $stats = $this->tester->getDisplay();
 
@@ -61,5 +62,8 @@ class StatsCommandTest extends CommandTestCase
         }
 
 
+=======
+        $this->assertEquals("Stats were not provided for the {$this->cacheName} provider of type Doctrine\\Common\\Cache\\ArrayCache\n", $this->tester->getDisplay());
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     }
 }

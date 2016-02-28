@@ -15,9 +15,12 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+<<<<<<< HEAD
 use Symfony\Component\Console\Helper\DialogHelper;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Question\Question;
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 
 /**
  * A console command for creating and sending simple emails
@@ -61,7 +64,11 @@ EOF
     {
         $mailerServiceName = sprintf('swiftmailer.mailer.%s', $input->getOption('mailer'));
         if (!$this->getContainer()->has($mailerServiceName)) {
+<<<<<<< HEAD
             throw new \InvalidArgumentException(sprintf('The mailer "%s" does not exist', $input->getOption('mailer')));
+=======
+            throw new \InvalidArgumentException(sprintf('The mailer "%s" does not exist', $this->getOption('mailer')));
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         }
         switch ($input->getOption('body-source')) {
             case 'file':
@@ -88,6 +95,7 @@ EOF
      */
     protected function interact(InputInterface $input, OutputInterface $output)
     {
+<<<<<<< HEAD
         // Symfony <2.5 BC
         /** @var QuestionHelper|DialogHelper $questionHelper */
         $questionHelper = $this->getHelperSet()->has('question') ? $this->getHelperSet()->get('question') : $this->getHelperSet()->get('dialog');
@@ -101,6 +109,14 @@ EOF
                     $question = sprintf('<question>%s</question>: ', ucfirst($option));
                 }
                 $input->setOption($option, $questionHelper->ask($input, $output, $question));
+=======
+        $dialog = $this->getHelper('dialog');
+        foreach ($input->getOptions() as $option => $value) {
+            if ($value === null) {
+                $input->setOption($option, $dialog->ask($output,
+                    sprintf('<question>%s</question>: ', ucfirst($option))
+                ));
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             }
         }
     }

@@ -36,7 +36,10 @@
         "doctrine/orm": "~2.3",
         "symfony/yaml": "~2.2|~3.0",
         "symfony/validator": "~2.2|~3.0",
+<<<<<<< HEAD
         "symfony/phpunit-bridge": "~2.7|~3.0",
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         "twig/twig": "~1.10",
         "satooshi/php-coveralls": "~0.6.1",
         "phpunit/phpunit": "~4"

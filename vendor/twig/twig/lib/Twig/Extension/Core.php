@@ -261,7 +261,10 @@ class Twig_Extension_Core extends Twig_Extension
                 'is' => array('precedence' => 100, 'callable' => array($this, 'parseTestExpression'), 'associativity' => Twig_ExpressionParser::OPERATOR_LEFT),
                 'is not' => array('precedence' => 100, 'callable' => array($this, 'parseNotTestExpression'), 'associativity' => Twig_ExpressionParser::OPERATOR_LEFT),
                 '**' => array('precedence' => 200, 'class' => 'Twig_Node_Expression_Binary_Power', 'associativity' => Twig_ExpressionParser::OPERATOR_RIGHT),
+<<<<<<< HEAD
                 '??' => array('precedence' => 300, 'class' => 'Twig_Node_Expression_NullCoalesce', 'associativity' => Twig_ExpressionParser::OPERATOR_RIGHT),
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             ),
         );
     }
@@ -387,7 +390,11 @@ function twig_random(Twig_Environment $env, $values = null)
             return '';
         }
         if (null !== $charset = $env->getCharset()) {
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $values = twig_convert_encoding($values, 'UTF-8', $charset);
             }
 
@@ -395,7 +402,11 @@ function twig_random(Twig_Environment $env, $values = null)
             // split at all positions, but not after the start and not before the end
             $values = preg_split('/(?<!^)(?!$)/u', $values);
 
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 foreach ($values as $i => $value) {
                     $values[$i] = twig_convert_encoding($value, $charset, 'UTF-8');
                 }
@@ -920,7 +931,11 @@ function twig_reverse_filter(Twig_Environment $env, $item, $preserveKeys = false
     if (null !== $charset = $env->getCharset()) {
         $string = (string) $item;
 
+<<<<<<< HEAD
         if ('UTF-8' !== $charset) {
+=======
+        if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             $item = twig_convert_encoding($string, 'UTF-8', $charset);
         }
 
@@ -928,7 +943,11 @@ function twig_reverse_filter(Twig_Environment $env, $item, $preserveKeys = false
 
         $string = implode('', array_reverse($matches[0]));
 
+<<<<<<< HEAD
         if ('UTF-8' !== $charset) {
+=======
+        if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             $string = twig_convert_encoding($string, $charset, 'UTF-8');
         }
 
@@ -1054,7 +1073,11 @@ function twig_escape_filter(Twig_Environment $env, $string, $strategy = 'html', 
         case 'js':
             // escape all non-alphanumeric characters
             // into their \xHH or \uHHHH representations
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $string = twig_convert_encoding($string, 'UTF-8', $charset);
             }
 
@@ -1064,14 +1087,22 @@ function twig_escape_filter(Twig_Environment $env, $string, $strategy = 'html', 
 
             $string = preg_replace_callback('#[^a-zA-Z0-9,\._]#Su', '_twig_escape_js_callback', $string);
 
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $string = twig_convert_encoding($string, $charset, 'UTF-8');
             }
 
             return $string;
 
         case 'css':
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $string = twig_convert_encoding($string, 'UTF-8', $charset);
             }
 
@@ -1081,14 +1112,22 @@ function twig_escape_filter(Twig_Environment $env, $string, $strategy = 'html', 
 
             $string = preg_replace_callback('#[^a-zA-Z0-9]#Su', '_twig_escape_css_callback', $string);
 
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $string = twig_convert_encoding($string, $charset, 'UTF-8');
             }
 
             return $string;
 
         case 'html_attr':
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $string = twig_convert_encoding($string, 'UTF-8', $charset);
             }
 
@@ -1098,7 +1137,11 @@ function twig_escape_filter(Twig_Environment $env, $string, $strategy = 'html', 
 
             $string = preg_replace_callback('#[^a-zA-Z0-9,\.\-_]#Su', '_twig_escape_html_attr_callback', $string);
 
+<<<<<<< HEAD
             if ('UTF-8' !== $charset) {
+=======
+            if ('UTF-8' != $charset) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 $string = twig_convert_encoding($string, $charset, 'UTF-8');
             }
 
@@ -1276,7 +1319,11 @@ if (function_exists('mb_get_info')) {
      */
     function twig_upper_filter(Twig_Environment $env, $string)
     {
+<<<<<<< HEAD
         if (null !== $charset = $env->getCharset()) {
+=======
+        if (null !== ($charset = $env->getCharset())) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             return mb_strtoupper($string, $charset);
         }
 
@@ -1293,7 +1340,11 @@ if (function_exists('mb_get_info')) {
      */
     function twig_lower_filter(Twig_Environment $env, $string)
     {
+<<<<<<< HEAD
         if (null !== $charset = $env->getCharset()) {
+=======
+        if (null !== ($charset = $env->getCharset())) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             return mb_strtolower($string, $charset);
         }
 
@@ -1310,7 +1361,11 @@ if (function_exists('mb_get_info')) {
      */
     function twig_title_string_filter(Twig_Environment $env, $string)
     {
+<<<<<<< HEAD
         if (null !== $charset = $env->getCharset()) {
+=======
+        if (null !== ($charset = $env->getCharset())) {
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             return mb_convert_case($string, MB_CASE_TITLE, $charset);
         }
 

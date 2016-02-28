@@ -51,11 +51,15 @@ class FunctionalTestCase extends TestCase
 
         $container->registerExtension($loader);
         $this->loadFromFile($container, $file);
+<<<<<<< HEAD
         $this->overrideContainer($container);
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         $container->compile();
 
         return $container;
     }
+<<<<<<< HEAD
 
     /**
      * Override this hook in your functional TestCase to customize the container
@@ -66,4 +70,6 @@ class FunctionalTestCase extends TestCase
     {
 
     }
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 }

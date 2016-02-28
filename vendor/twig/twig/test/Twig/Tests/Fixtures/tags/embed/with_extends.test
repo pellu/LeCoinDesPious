@@ -17,7 +17,10 @@
             block1extended
         {% endblock %}
     {% endembed %}
+<<<<<<< HEAD
     {{ parent() }}
+=======
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 {% endblock %}
 --TEMPLATE(base.twig)--
 A
@@ -55,6 +58,10 @@ A
             block1extended
         B
     block2
+<<<<<<< HEAD
 C        blockc2base
 
 B
+=======
+CB
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5

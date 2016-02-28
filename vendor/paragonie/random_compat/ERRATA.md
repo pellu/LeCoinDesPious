@@ -6,7 +6,11 @@ The order is:
 
  1. `libsodium if available`
  2. `fread() /dev/urandom if available`
+<<<<<<< HEAD
  3. `mcrypt_create_iv($bytes, MCRYPT_DEV_URANDOM)`
+=======
+ 3. `mcrypt_create_iv($bytes, MCRYPT_CREATE_IV)`
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
  4. `COM('CAPICOM.Utilities.1')->GetRandom()`
  5. `openssl_random_pseudo_bytes()`
 

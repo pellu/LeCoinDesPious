@@ -51,11 +51,15 @@ final class Php70
 
     public static function error_clear_last()
     {
+<<<<<<< HEAD
         static $handler;
         if (!$handler) {
              $handler = function() { return false; };
         }
         set_error_handler($handler);
+=======
+        set_error_handler('var_dump', 0);
+>>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         @trigger_error('');
         restore_error_handler();
     }
