@@ -1,6 +1,15 @@
-<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}" />
-    </div>
+<form id="loginForm" action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
+    <fieldset>
+        <style>
+            input#remember_me{
+                margin-top: -18px;
+                margin-left: 50px;
+            }
+        </style>
+        <fieldset>
+            {{ form_widget(form) }}
+            <input type="submit" value="{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}" />
+        </fieldset>
+    </fieldset>
 </form>
+<div class="clear"></div>

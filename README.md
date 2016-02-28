@@ -63,4 +63,4 @@ git push (pour envoyé le commit)
 ~~~suivre les path de symfony :
 php app/console router:match /login
 
-php app/console router:debug
+php app/console debug:router

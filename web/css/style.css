@@ -2174,7 +2174,7 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 }
 .copy-right p{
 	font-size: 1em;
-	color: #fff;
+	color:black;
 	letter-spacing: 0.05em;
 }
 .copy-right p a{

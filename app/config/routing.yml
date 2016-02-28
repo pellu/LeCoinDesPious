@@ -1,3 +1,19 @@
+# app/config/routing.yml
+BloggerBlogBundle_blog:
+    pattern:  /blog
+    defaults: { _controller: BloggerBlogBundle:Page:index }
+
+BloggerBlogBundle_contact:
+    pattern: /contact
+    defaults: { _controller: BloggerBlogBundle:Page:contact }
+
+BloggerBlogBundle_about:
+    pattern: /about
+    defaults: { _controller: BloggerBlogBundle:Page:about }
+
+BloggerBlogBundle_homepage:
+    pattern:  /blog/{name}
+    defaults: { _controller: BloggerBlogBundle:Default:index }
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
@@ -11,7 +27,7 @@ article:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
-# app/config/routing.yml
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
