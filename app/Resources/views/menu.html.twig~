@@ -54,7 +54,6 @@
                 <div class="cssmenu">
                     <ul>
                         <li><a href="#"><span>Home</span></a></li>
-<li><a href="login"><span>Connexion</span></a></li>
                         <li><a href="#"><span>About</span></a></li>
                         <li  class="has-sub"><a href="#"><span>Shope</span></a>
                             <ul>
