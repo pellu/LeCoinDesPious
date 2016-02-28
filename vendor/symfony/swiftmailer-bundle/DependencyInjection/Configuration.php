@@ -11,10 +11,7 @@
 
 namespace Symfony\Bundle\SwiftmailerBundle\DependencyInjection;
 
-<<<<<<< HEAD
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -92,7 +89,6 @@ class Configuration implements ConfigurationInterface
             ->requiresAtLeastOneElement()
             ->useAttributeAsKey('name')
                 ->prototype('array')
-<<<<<<< HEAD
             // BC layer for "delivery_address: null" (the case of a string goes through the XML normalization too)
             ->beforeNormalization()
                 ->ifTrue(function ($v) {
@@ -111,9 +107,6 @@ class Configuration implements ConfigurationInterface
             ->end()
             ->children()
                 ->scalarNode('url')->defaultNull()->end()
-=======
-            ->children()
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 ->scalarNode('transport')->defaultValue('smtp')->end()
                 ->scalarNode('username')->defaultNull()->end()
                 ->scalarNode('password')->defaultNull()->end()
@@ -136,7 +129,6 @@ class Configuration implements ConfigurationInterface
                     ->end()
                 ->end()
                 ->scalarNode('sender_address')->end()
-<<<<<<< HEAD
                 ->arrayNode('delivery_addresses')
                     ->performNoDeepMerging()
                     ->beforeNormalization()
@@ -146,9 +138,6 @@ class Configuration implements ConfigurationInterface
                     ->prototype('scalar')
                     ->end()
                 ->end()
-=======
-                ->scalarNode('delivery_address')->end()
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
                 ->arrayNode('antiflood')
                     ->children()
                         ->scalarNode('threshold')->defaultValue(99)->end()
@@ -169,10 +158,7 @@ class Configuration implements ConfigurationInterface
                 ->end()
             ->end()
             ->fixXmlConfig('delivery_whitelist_pattern', 'delivery_whitelist')
-<<<<<<< HEAD
             ->fixXmlConfig('delivery_address', 'delivery_addresses')
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             ->children()
                 ->arrayNode('delivery_whitelist')
                     ->prototype('scalar')

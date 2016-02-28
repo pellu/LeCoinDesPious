@@ -63,16 +63,12 @@ class Twig_Parser implements Twig_ParserInterface
     public function parse(Twig_TokenStream $stream, $test = null, $dropNeedle = false)
     {
         // push all variables into the stack to keep the current state of the parser
-<<<<<<< HEAD
         // using get_object_vars() instead of foreach would lead to https://bugs.php.net/71336
         $vars = array();
         foreach ($this as $k => $v) {
             $vars[$k] = $v;
         }
 
-=======
-        $vars = get_object_vars($this);
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         unset($vars['stack'], $vars['env'], $vars['handlers'], $vars['visitors'], $vars['expressionParser'], $vars['reservedMacroNames']);
         $this->stack[] = $vars;
 

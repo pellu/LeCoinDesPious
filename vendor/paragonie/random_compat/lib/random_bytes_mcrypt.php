@@ -48,10 +48,7 @@ function random_bytes($bytes)
             'random_bytes(): $bytes must be an integer'
         );
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     if ($bytes < 1) {
         throw new Error(
             'Length must be greater than 0'
@@ -59,7 +56,6 @@ function random_bytes($bytes)
     }
 
     $buf = @mcrypt_create_iv($bytes, MCRYPT_DEV_URANDOM);
-<<<<<<< HEAD
     if (
         $buf !== false
         &&
@@ -71,16 +67,6 @@ function random_bytes($bytes)
         return $buf;
     }
 
-=======
-    if ($buf !== false) {
-        if (RandomCompat_strlen($buf) === $bytes) {
-            /**
-             * Return our random entropy buffer here:
-             */
-            return $buf;
-        }
-    }
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     /**
      * If we reach here, PHP has failed us.
      */

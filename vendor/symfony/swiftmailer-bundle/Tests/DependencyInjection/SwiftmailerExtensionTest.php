@@ -135,7 +135,6 @@ class SwiftmailerExtensionTest extends TestCase
         $this->assertEquals('1000', $container->getParameter('swiftmailer.mailer.third_mailer.transport.smtp.timeout'));
         $this->assertEquals('127.0.0.1', $container->getParameter('swiftmailer.mailer.third_mailer.transport.smtp.source_ip'));
     }
-<<<<<<< HEAD
     /**
      * @dataProvider getConfigTypes
      */
@@ -151,8 +150,6 @@ class SwiftmailerExtensionTest extends TestCase
         $this->assertEquals('password', $container->getParameter('swiftmailer.mailer.smtp_mailer.transport.smtp.password'));
         $this->assertEquals('login', $container->getParameter('swiftmailer.mailer.smtp_mailer.transport.smtp.auth_mode'));
     }
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 
         /**
      * @dataProvider getConfigTypes
@@ -266,17 +263,13 @@ class SwiftmailerExtensionTest extends TestCase
 
         $this->assertSame(array('swiftmailer.default.plugin' => array(array())), $container->getDefinition('swiftmailer.mailer.default.plugin.redirecting')->getTags());
         $this->assertSame('single@host.com', $container->getParameter('swiftmailer.mailer.default.single_address'));
-<<<<<<< HEAD
         $this->assertSame(array('single@host.com'), $container->getParameter('swiftmailer.mailer.default.delivery_addresses'));
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
         $this->assertEquals(array('/foo@.*/'), $container->getParameter('swiftmailer.mailer.default.delivery_whitelist'));
     }
 
     /**
      * @dataProvider getConfigTypes
      */
-<<<<<<< HEAD
     public function testMultiRedirectionConfig($type)
     {
         $container = $this->loadContainerFromFile('redirect_multi', $type);
@@ -288,8 +281,6 @@ class SwiftmailerExtensionTest extends TestCase
     /**
      * @dataProvider getConfigTypes
      */
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     public function testAntifloodConfig($type)
     {
         $container = $this->loadContainerFromFile('antiflood', $type);

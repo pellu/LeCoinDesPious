@@ -12,10 +12,7 @@
 namespace Sensio\Bundle\FrameworkExtraBundle\EventListener;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Request;
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -24,13 +21,9 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
-<<<<<<< HEAD
  * Handles the Template annotation for actions.
  *
  * Depends on pre-processing of the ControllerListener.
-=======
- * The TemplateListener class handles the Template annotation.
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -59,7 +52,6 @@ class TemplateListener implements EventSubscriberInterface
      */
     public function onKernelController(FilterControllerEvent $event)
     {
-<<<<<<< HEAD
         $request = $event->getRequest();
         $template = $request->attributes->get('_template');
 
@@ -74,45 +66,12 @@ class TemplateListener implements EventSubscriberInterface
         }
 
         $template->setOwner($event->getController());
-=======
-        if (!is_array($controller = $event->getController())) {
-            return;
-        }
-
-        $request = $event->getRequest();
-
-        if (!$configuration = $request->attributes->get('_template')) {
-            return;
-        }
-
-        if (!$configuration->getTemplate()) {
-            $guesser = $this->container->get('sensio_framework_extra.view.guesser');
-            $configuration->setTemplate($guesser->guessTemplateName($controller, $request, $configuration->getEngine()));
-        }
-
-        $request->attributes->set('_template', $configuration->getTemplate());
-        $request->attributes->set('_template_vars', $configuration->getVars());
-        $request->attributes->set('_template_streamable', $configuration->isStreamable());
-
-        // all controller method arguments
-        if (!$configuration->getVars()) {
-            $r = new \ReflectionObject($controller[0]);
-
-            $vars = array();
-            foreach ($r->getMethod($controller[1])->getParameters() as $param) {
-                $vars[] = $param->getName();
-            }
-
-            $request->attributes->set('_template_default_vars', $vars);
-        }
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     }
 
     /**
      * Renders the template and initializes a new response object with the
      * rendered template content.
      *
-<<<<<<< HEAD
      * @param GetResponseForControllerResultEvent $event
      */
     public function onKernelView(GetResponseForControllerResultEvent $event)
@@ -151,52 +110,12 @@ class TemplateListener implements EventSubscriberInterface
         if ($template->isStreamable()) {
             $callback = function () use ($templating, $template, $parameters) {
                 return $templating->stream($template->getTemplate(), $parameters);
-=======
-     * @param GetResponseForControllerResultEvent $event A GetResponseForControllerResultEvent instance
-     */
-    public function onKernelView(GetResponseForControllerResultEvent $event)
-    {
-        $request = $event->getRequest();
-        $parameters = $event->getControllerResult();
-
-        if (null === $parameters) {
-            if (!$vars = $request->attributes->get('_template_vars')) {
-                if (!$vars = $request->attributes->get('_template_default_vars')) {
-                    return;
-                }
-            }
-
-            $parameters = array();
-            foreach ($vars as $var) {
-                $parameters[$var] = $request->attributes->get($var);
-            }
-        }
-
-        if (!is_array($parameters)) {
-            return $parameters;
-        }
-
-        if (!$template = $request->attributes->get('_template')) {
-            return $parameters;
-        }
-
-        $templating = $this->container->get('templating');
-
-        if (!$request->attributes->get('_template_streamable')) {
-            $event->setResponse($templating->renderResponse($template, $parameters));
-        } else {
-            $callback = function () use ($templating, $template, $parameters) {
-                return $templating->stream($template, $parameters);
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             };
 
             $event->setResponse(new StreamedResponse($callback));
         }
-<<<<<<< HEAD
 
         $event->setResponse($templating->renderResponse($template->getTemplate(), $parameters));
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     }
 
     public static function getSubscribedEvents()
@@ -206,7 +125,6 @@ class TemplateListener implements EventSubscriberInterface
             KernelEvents::VIEW => 'onKernelView',
         );
     }
-<<<<<<< HEAD
 
     /**
      * @param Request  $request
@@ -238,6 +156,4 @@ class TemplateListener implements EventSubscriberInterface
 
         return $parameters;
     }
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 }

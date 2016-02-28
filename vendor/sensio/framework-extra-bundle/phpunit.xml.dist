@@ -6,13 +6,9 @@
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>
-<<<<<<< HEAD
     <php>
         <server name="KERNEL_DIR" value="Tests/Fixtures/"/>
     </php>
-=======
-
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
     <filter>
         <whitelist>
             <directory>./</directory>

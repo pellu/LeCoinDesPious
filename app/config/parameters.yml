@@ -10,7 +10,3 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
-<<<<<<< HEAD
-=======
-    locale: fr
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5

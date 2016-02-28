@@ -26,11 +26,7 @@
             $em->flush();
 
             {% if 'show' in actions -%}
-<<<<<<< HEAD
                 return $this->redirectToRoute('{{ route_name_prefix }}_show', array('id' => ${{ entity_singularized }}->getId()));
-=======
-                return $this->redirectToRoute('{{ route_name_prefix }}_show', array('id' => ${{ entity_class|lower }}->getId()));
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
             {%- else -%}
                 return $this->redirectToRoute('{{ route_name_prefix }}_index'));
             {%- endif %}

@@ -24,11 +24,7 @@ class Template extends ConfigurationAnnotation
     /**
      * The template reference.
      *
-<<<<<<< HEAD
      * @var TemplateReference|string
-=======
-     * @var TemplateReference
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
      */
     protected $template;
 
@@ -54,7 +50,6 @@ class Template extends ConfigurationAnnotation
     protected $streamable = false;
 
     /**
-<<<<<<< HEAD
      * The controller (+action) this annotation is set to.
      *
      * @var array
@@ -62,8 +57,6 @@ class Template extends ConfigurationAnnotation
     private $owner;
 
     /**
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
      * Returns the array of templates variables.
      *
      * @return array
@@ -172,7 +165,6 @@ class Template extends ConfigurationAnnotation
     {
         return false;
     }
-<<<<<<< HEAD
 
     /**
      * @param array $owner
@@ -191,6 +183,4 @@ class Template extends ConfigurationAnnotation
     {
         return $this->owner;
     }
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 }

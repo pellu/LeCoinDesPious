@@ -16,12 +16,8 @@ namespace Doctrine\Bundle\DoctrineBundle\Controller;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Platforms\SQLServerPlatform;
-<<<<<<< HEAD
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-=======
-use Symfony\Component\DependencyInjection\ContainerAware;
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -29,7 +25,6 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @author Christophe Coevoet <stof@notk.org>
  */
-<<<<<<< HEAD
 class ProfilerController implements ContainerAwareInterface
 {
     /**
@@ -46,11 +41,6 @@ class ProfilerController implements ContainerAwareInterface
     }
 
     /**
-=======
-class ProfilerController extends ContainerAware
-{
-    /**
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
      * Renders the profiler panel for the given token.
      *
      * @param string  $token          The profiler token

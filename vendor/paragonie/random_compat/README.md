@@ -28,7 +28,6 @@ If PHP cannot safely generate random data, this library will throw an `Exception
 It will never fall back to insecure random data. If this keeps happening, upgrade
 to a newer version of PHP immediately.
 
-<<<<<<< HEAD
 ## Installing
 
 **With [Composer](https://getcomposer.org):**
@@ -54,8 +53,6 @@ release on Github.
 2. Extract the files into your project.
 3. `require_once "/path/to/random_compat/lib/random.php";`
 
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 ## Usage
 
 This library exposes the [CSPRNG functions added in PHP 7](https://secure.php.net/manual/en/ref.csprng.php)
@@ -146,10 +143,7 @@ weren't for the contributions of the following individuals:
 
 * [@AndrewCarterUK (Andrew Carter)](https://github.com/AndrewCarterUK)
 * [@asgrim (James Titcumb)](https://github.com/asgrim)
-<<<<<<< HEAD
 * [@bcremer (Benjamin Cremer)](https://github.com/bcremer)
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 * [@CodesInChaos (Christian Winnerlein)](https://github.com/CodesInChaos)
 * [@chriscct7 (Chris Christoff)](https://github.com/chriscct7)
 * [@cs278 (Chris Smith)](https://github.com/cs278)
@@ -166,10 +160,7 @@ weren't for the contributions of the following individuals:
 * [@narfbg (Andrey Andreev)](https://github.com/narfbg)
 * [@nicolas-grekas (Nicolas Grekas)](https://github.com/nicolas-grekas)
 * [@oittaa](https://github.com/oittaa)
-<<<<<<< HEAD
 * [@oucil (Kevin Farley)](https://github.com/oucil)
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 * [@redragonx (Stephen Chavez)](https://github.com/redragonx)
 * [@rchouinard (Ryan Chouinard)](https://github.com/rchouinard)
 * [@SammyK (Sammy Kaye Powers)](https://github.com/SammyK)

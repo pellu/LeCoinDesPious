@@ -127,11 +127,7 @@ Global Variables
 
 The following variables are always available in templates:
 
-<<<<<<< HEAD
 * ``_self``: references the current template;
-=======
-* ``_self``: references the current template (deprecated since Twig 1.20);
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 * ``_context``: references the current context;
 * ``_charset``: references the current charset.
 
@@ -812,7 +808,6 @@ The following operators don't fit into any of the other categories:
       {{ foo ?: 'no' }} is the same as {{ foo ? foo : 'no' }}
       {{ foo ? 'yes' }} is the same as {{ foo ? 'yes' : '' }}
 
-<<<<<<< HEAD
 * ``??``: The null-coalescing operator:
 
   .. code-block:: jinja
@@ -820,8 +815,6 @@ The following operators don't fit into any of the other categories:
       {# returns the value of foo if it is defined and not null, 'no' otherwise #}
       {{ foo ?? 'no' }}
 
-=======
->>>>>>> 500105b5d4a2f80fc13e57344d0ab3570f4029e5
 String Interpolation
 ~~~~~~~~~~~~~~~~~~~~
 
