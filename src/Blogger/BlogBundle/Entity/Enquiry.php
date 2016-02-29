@@ -1,61 +1,54 @@
 <?php
 // src/Blogger/BlogBundle/Entity/Enquiry.php
-
 namespace Blogger\BlogBundle\Entity;
-use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Email;
-use Symfony\Component\Validator\Constraints\Length;
-
 
 class Enquiry
 {
+    protected $name;
 
-protected $email;
+    protected $email;
 
-protected $subject;
+    protected $subject;
 
-protected $body;
+    protected $body;
 
+    public function getName()
+    {
+        return $this->name;
+    }
 
-public static function loadValidatorMetadata(ClassMetadata $metadata)
-{
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 
-$metadata->addPropertyConstraint('email', new Email());
+    public function getEmail()
+    {
+        return $this->email;
+    }
 
-$metadata->addPropertyConstraint('subject', new NotBlank());
-$metadata->addPropertyConstraint('subject', new Length(50));
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
 
-$metadata->addPropertyConstraint('body', new Length(50));
-}
+    public function getSubject()
+    {
+        return $this->subject;
+    }
 
-public function getEmail()
-{
-return $this->email;
-}
+    public function setSubject($subject)
+    {
+        $this->subject = $subject;
+    }
 
-public function setEmail($email)
-{
-$this->email = $email;
-}
+    public function getBody()
+    {
+        return $this->body;
+    }
 
-public function getSubject()
-{
-return $this->subject;
-}
-
-public function setSubject($subject)
-{
-$this->subject = $subject;
-}
-
-public function getBody()
-{
-return $this->body;
-}
-
-public function setBody($body)
-{
-$this->body = $body;
-}
+    public function setBody($body)
+    {
+        $this->body = $body;
+    }
 }
