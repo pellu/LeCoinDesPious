@@ -14,7 +14,7 @@ BloggerBlogBundle_home:
     pattern:  /blog/
     defaults: { _controller: BloggerBlogBundle:Page:index }
 BloggerBlogBundle_blog_show:
-    pattern:  /{id}
+    pattern:  /blog/{id}
     defaults: { _controller: BloggerBlogBundle:Blog:show }
     requirements:
         _method:  GET
