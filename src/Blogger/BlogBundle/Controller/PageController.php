@@ -31,8 +31,6 @@ class PageController extends Controller
     }
     public function contactAction()
     {
-
-
         $request = $this->getRequest();
         if ($request->getMethod() == 'POST') {
             $form->bindRequest($request);
@@ -42,6 +40,5 @@ class PageController extends Controller
         return $this->render('BloggerBlogBundle:Page:contact.html.twig'
 
         );
-
-  }
+    }
 }
