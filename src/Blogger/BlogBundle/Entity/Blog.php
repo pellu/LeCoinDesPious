@@ -76,7 +76,7 @@ class Blog
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -99,7 +99,7 @@ class Blog
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -122,7 +122,7 @@ class Blog
     /**
      * Get author
      *
-     * @return string 
+     * @return string
      */
     public function getAuthor()
     {
@@ -145,7 +145,7 @@ class Blog
     /**
      * Get blog
      *
-     * @return string 
+     * @return string
      */
     public function getBlog($length = null)
     {
@@ -171,7 +171,7 @@ class Blog
     /**
      * Get image
      *
-     * @return string 
+     * @return string
      */
     public function getImage()
     {
@@ -194,7 +194,7 @@ class Blog
     /**
      * Get tags
      *
-     * @return string 
+     * @return string
      */
     public function getTags()
     {
@@ -217,7 +217,7 @@ class Blog
     /**
      * Get created
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreated()
     {
@@ -240,10 +240,14 @@ class Blog
     /**
      * Get updated
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdated()
     {
         return $this->updated;
+    }
+    public function __toString()
+    {
+        return $this->getTitle();
     }
 }

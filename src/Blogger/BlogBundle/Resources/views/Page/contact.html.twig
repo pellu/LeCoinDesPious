@@ -1,16 +1,31 @@
-{% block fos_user_content %}
-    {% include "::header.html.twig" %}
-    <header>
-        <h1>Contact symblog</h1>
-    </header>
+{# src/Blogger/BlogBundle/Resources/views/Page/contact.html.twig #}
 
-    <p>Want to contact Le Coin des Pious?</p>
 
-    Blocage du formulaire <a href="http://keiruaprod.fr/symblog-fr/docs/validateurs-et-formulaires.html#enquirytype">Dispo ici</a>
-    <form action="{{ path('BloggerBlogBundle_contact') }}" method="post">
-        {{ form_widget(form) }}
+{% block title %}Contact{% endblock %}
 
-        <input type="submit" />
-    </form>
-    {% include "::footer.html.twig" %}
-{% endblock fos_user_content %}
+{% block body %}
+	<header>
+		<h1>Contact symblog</h1>
+	</header>
+
+	{% if app.session.hasFlash('blogger-notice') %}
+		<div class="blogger-notice">
+			{{ app.session.flash('blogger-notice') }}
+		</div>
+	{% endif %}
+
+	<p>Want to contact symblog?</p>
+
+	<form action="{{ path('BloggerBlogBundle_contact') }}" method="post" class="blogger">
+		{{ form_errors(form) }}
+
+		{{ form_row(form.name) }}
+		{{ form_row(form.email) }}
+		{{ form_row(form.subject) }}
+		{{ form_row(form.body) }}
+
+		{{ form_rest(form) }}
+
+		<input type="submit" value="Submit" />
+	</form>
+{% endblock%}

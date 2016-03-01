@@ -8,11 +8,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="blog")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Blog
 {
     /**
-     * @ORM\Id
+     * @ORM\Id 
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -34,7 +35,7 @@ class Blog
     protected $blog;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length="20")
      */
     protected $image;
 
@@ -43,12 +44,7 @@ class Blog
      */
     protected $tags;
 
-    protected $comments = array();
-
-    public function getComments()
-    {
-        return $this->comments;
-    }
+    protected $comments;
 
     /**
      * @ORM\Column(type="datetime")
@@ -65,6 +61,7 @@ class Blog
         $this->setCreated(new \DateTime());
         $this->setUpdated(new \DateTime());
     }
+
     /**
      * @ORM\preUpdate
      */
@@ -87,13 +84,10 @@ class Blog
      * Set title
      *
      * @param string $title
-     * @return Blog
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
-        return $this;
     }
 
     /**
@@ -110,13 +104,10 @@ class Blog
      * Set author
      *
      * @param string $author
-     * @return Blog
      */
     public function setAuthor($author)
     {
         $this->author = $author;
-
-        return $this;
     }
 
     /**
@@ -132,34 +123,27 @@ class Blog
     /**
      * Set blog
      *
-     * @param string $blog
-     * @return Blog
+     * @param text $blog
      */
     public function setBlog($blog)
     {
         $this->blog = $blog;
-
-        return $this;
     }
 
     /**
      * Get blog
      *
-     * @return string 
+     * @return text 
      */
-    public function getBlog($length = null)
+    public function getBlog()
     {
-        if (false === is_null($length) && $length > 0)
-            return substr($this->blog, 0, $length);
-        else
-            return $this->blog;
+        return $this->blog;
     }
 
     /**
      * Set image
      *
      * @param string $image
-     * @return Blog
      */
     public function setImage($image)
     {
@@ -181,20 +165,17 @@ class Blog
     /**
      * Set tags
      *
-     * @param string $tags
-     * @return Blog
+     * @param text $tags
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
-
-        return $this;
     }
 
     /**
      * Get tags
      *
-     * @return string 
+     * @return text 
      */
     public function getTags()
     {
@@ -204,20 +185,17 @@ class Blog
     /**
      * Set created
      *
-     * @param \DateTime $created
-     * @return Blog
+     * @param datetime $created
      */
     public function setCreated($created)
     {
         $this->created = $created;
-
-        return $this;
     }
 
     /**
      * Get created
      *
-     * @return \DateTime 
+     * @return datetime 
      */
     public function getCreated()
     {
@@ -227,20 +205,17 @@ class Blog
     /**
      * Set updated
      *
-     * @param \DateTime $updated
-     * @return Blog
+     * @param datetime $updated
      */
     public function setUpdated($updated)
     {
         $this->updated = $updated;
-
-        return $this;
     }
 
     /**
      * Get updated
      *
-     * @return \DateTime 
+     * @return datetime 
      */
     public function getUpdated()
     {

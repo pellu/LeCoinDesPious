@@ -3,7 +3,7 @@ BloggerBlogBundle_blog:
     defaults: { _controller: BloggerBlogBundle:Default:index }
 
 BloggerBlogBundle_contact:
-    pattern:  /contact/
+    pattern:  /contact
     defaults: { _controller: BloggerBlogBundle:Page:contact }
 
 BloggerBlogBundle_about:
@@ -13,9 +13,17 @@ BloggerBlogBundle_about:
 BloggerBlogBundle_home:
     pattern:  /blog/
     defaults: { _controller: BloggerBlogBundle:Page:index }
+
 BloggerBlogBundle_blog_show:
-    pattern:  /blog/{id}
+    pattern:  blog/{id}
     defaults: { _controller: BloggerBlogBundle:Blog:show }
     requirements:
         _method:  GET
         id: \d+
+
+BloggerBlogBundle_comment_create:
+    pattern:  /comment/{blog_id}
+    defaults: { _controller: BloggerBlogBundle:Comment:create }
+    requirements:
+        _method:  POST
+        blog_id: \d+
