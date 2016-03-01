@@ -4,6 +4,7 @@
 namespace Blogger\BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Blogger\BlogBundle\Form\EnquiryType;
 
 /**
  * Blog controller.

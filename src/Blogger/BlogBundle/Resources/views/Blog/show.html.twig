@@ -1,6 +1,6 @@
 {# src/Blogger/BlogBundle/Resources/views/Blog/show.html.twig #}
 
-
+{% include "::header.html.twig" %}
 {% block title %}{{ blog.title }}{% endblock %}
 
 {% block body %}
@@ -15,3 +15,4 @@
         </div>
     </article>
 {% endblock %}
+{% include "::footer.html.twig" %}
