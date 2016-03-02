@@ -10,6 +10,8 @@ Pour voir le site actuel lors de la dernière mise à jour
 Importer la base de donnée disponible à la racine du dossier "lecoindespious_.sql"
 Ensuite modifier le fichier "parameters.yml" avec les indications de votre serveur
 
+Un utilisateur est inclus pellu/pellu
+
 Template de base html
 ========================
 

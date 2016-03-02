@@ -39,6 +39,11 @@ class Blog
     protected $image;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    protected $image2;
+
+    /**
      * @ORM\Column(type="text")
      */
     protected $tags;
@@ -166,6 +171,29 @@ class Blog
         $this->image = $image;
 
         return $this;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     * @return Blog
+     */
+    public function setImage2($image2)
+    {
+        $this->image = $image2;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage2()
+    {
+        return $this->image2;
     }
 
     /**

@@ -1,5 +1,53 @@
 {% block fos_user_content %}
 {% include "::header.html.twig" %}
+
+    {% block body %}
+        {% for blog in blogs %}
+            <div class="blog-tabs">
+                <ul class="blog-section">
+                    <li class="blog-artical">
+                        <div class="blog-artical-head">
+                            <img src="http://localhost{{ asset(['images/', blog.image]|join) }}" alt="{{ blog.title }} image not found" class="large">
+                            <ul class="artical-date">
+                                <li><a href="#"><time datetime="{{ blog.created|date('b') }}">{{ blog.created|date('l, F j, Y') }}</time></a></li>
+                                <li><a class="text-icon" href="#"></a>{{blog.author}}</li>
+                                <div class="clear"> </div>
+                            </ul>
+                        </div>
+                        <div class="artical-info">
+                            <a href="{{ path('BloggerBlogBundle_blog_show', { 'id': blog.id }) }}"><h4>{{ blog.title }}</h4></a>
+                            <p>{{ blog.blog(500) }}...</p>
+                        </div>
+                        <div class="artical-related-info">
+                            <div class="artical-related-info-row">
+                                <ul class="artical-related-info-row-left">
+                                    <li><a class="view" href="{{ path('BloggerBlogBundle_blog_show', { 'id': blog.id }) }}"><span> </span>4,200</a></li>
+                                    <li><a class="comment-icon" href="{{ path('BloggerBlogBundle_blog_show', { 'id': blog.id }) }}"><span> </span><a href="{{ path('BloggerBlogBundle_blog_show', { 'id': blog.id }) }}">{{ blog.comment }} comments</a></li>
+                                </ul>
+                                <ul class="artical-related-info-row-right">
+                                    <li><a class="articl-readmore" href="{{ path('BloggerBlogBundle_blog_show', { 'id': blog.id }) }}">Lire la suite</a></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {% else %}
+            <p>La base de données contient aucun article</p>
+        {% endfor %}
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
 {% block body %}
 {% for blog in blogs %}
     {% include "::article.html.twig" %}
