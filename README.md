@@ -3,6 +3,13 @@ LeCoinDesPious
 Bienvenue dans le coin des pious
 Un Projet Développé par Pelluard, Boutet et Shan
 
+Voir le site
+========================
+Pour voir le site actuel lors de la dernière mise à jour
+
+Importer la base de donnée disponible à la racine du dossier "lecoindespious_.sql"
+Ensuite modifier le fichier "parameters.yml" avec les indications de votre serveur
+
 Template de base html
 ========================
 
