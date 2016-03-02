@@ -1,3 +1,6 @@
+BloggerBlogBundle_accueil:
+    pattern:  /
+    defaults: { _controller: BloggerBlogBundle:Page:accueil }
 
 BloggerBlogBundle_contact:
     pattern:  /contact/

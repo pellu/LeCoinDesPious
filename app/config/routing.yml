@@ -2,15 +2,11 @@
 BloggerBlogBundle:
     resource: "@BloggerBlogBundle/Resources/config/routing.yml"
     prefix:   /
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
     prefix:   /
-
-article:
-    resource: "@ArticleBundle/Controller/"
-    type:     annotation
-    prefix:   /article
 
 app:
     resource: "@AppBundle/Controller/"

@@ -1,4 +1,4 @@
-<?php
+<?php/*
 
 namespace UserBundle\Controller;
 
@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/fuck")
      */
-    public function indexAction()
+    /*public function indexAction()
     {
         return $this->render('UserBundle:Default:index.html.twig');
     }
-}
+}*/
