@@ -18,6 +18,6 @@ class EnquiryType extends AbstractType
 
     public function getName()
     {
-        return 'contact';
+        return ('contact');
     }
-}
+};
