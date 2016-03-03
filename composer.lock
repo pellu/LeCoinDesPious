@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9aa5eb9a737405b380ee552e1e464e21",
-    "content-hash": "9499dfe3b49680902fbe75279b2e40d0",
+    "hash": "755730183499ae223fed9a8b43a93394",
+    "content-hash": "160c992fc2a9c4c50ec73a8069e38b6a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -784,6 +784,57 @@
             "time": "2015-06-01 00:57:03"
         },
         {
+            "name": "idci/simple-media-bundle",
+            "version": "dev-master",
+            "target-dir": "IDCI/Bundle/SimpleMediaBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/IDCI-Consulting/SimpleMediaBundle.git",
+                "reference": "2f99e018fb444cc68010630061a130a244e5468a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/IDCI-Consulting/SimpleMediaBundle/zipball/2f99e018fb444cc68010630061a130a244e5468a",
+                "reference": "2f99e018fb444cc68010630061a130a244e5468a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "*",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.2",
+                "twig/twig": "*"
+            },
+            "suggest": {
+                "avalanche123/imagine-bundle": "v2.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "IDCI\\Bundle\\SimpleMediaBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Bondaz",
+                    "email": "gabriel.bondaz@idci-consulting.fr",
+                    "homepage": "http://www.idci-consulting.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony SimpleMediaBundle",
+            "keywords": [
+                "images",
+                "media",
+                "uploaded files",
+                "videos"
+            ],
+            "time": "2013-08-05 12:07:39"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -928,16 +979,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.17.2",
+            "version": "1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
+                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
-                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
+                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
                 "shasum": ""
             },
             "require": {
@@ -966,6 +1017,7 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "raven/raven": "Allow sending log messages to a Sentry server",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
@@ -975,7 +1027,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.16.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -1001,7 +1053,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-10-14 12:51:02"
+            "time": "2016-03-01 18:00:40"
         },
         {
             "name": "paragonie/random_compat",
@@ -1302,20 +1354,20 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v2.8.2",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "84785c4d44801c4dd82829fa2e1820cacfe2c46f"
+                "reference": "27c2e3eaec7a0ba3462f99ea92678cbfc7b146e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/84785c4d44801c4dd82829fa2e1820cacfe2c46f",
-                "reference": "84785c4d44801c4dd82829fa2e1820cacfe2c46f",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/27c2e3eaec7a0ba3462f99ea92678cbfc7b146e4",
+                "reference": "27c2e3eaec7a0ba3462f99ea92678cbfc7b146e4",
                 "shasum": ""
             },
             "require": {
-                "monolog/monolog": "~1.8",
+                "monolog/monolog": "~1.12",
                 "php": ">=5.3.2",
                 "symfony/config": "~2.3|~3.0",
                 "symfony/dependency-injection": "~2.3|~3.0",
@@ -1329,7 +1381,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8.x-dev"
+                    "dev-master": "2.9.x-dev"
                 }
             },
             "autoload": {
@@ -1357,7 +1409,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2015-11-17 10:02:29"
+            "time": "2016-03-01 17:53:42"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -2298,6 +2350,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "idci/simple-media-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20
     },
     "prefer-stable": false,
