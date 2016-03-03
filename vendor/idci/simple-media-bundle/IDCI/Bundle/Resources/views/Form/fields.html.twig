@@ -1,0 +1,13 @@
+{% block idcisimplemediabundle_filemediatype_widget %}
+    {% if form.get('data').id %}
+    <img src="{{ form.get('data').url }}" class="simplemedia" alt="{{ form.get('data').providerReference }}" title="{{ form.get('data').providerReference }}" />
+    {% endif %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+{% block idcisimplemediabundle_youtubemediatype_widget %}
+    {% if form.get('data').id %}
+    <iframe width="560" height="315" src="{{ form.get('data').publicUrl }}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
+    {{ form_widget(form) }}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<a href="{{ path('createform') }}">Create</a>
+
+<ul>
+  {% for test in tests %}
+  <li>
+    <a href="{{ path('editform', { 'id': test.id }) }}">{{ test.name }}</a>
+    <a href="{{ path('delete', { 'id': test.id }) }}">[X]</a>
+    <ul>
+      {% for media in medias(test) %}
+      <li>
+        <img src="{{ asset(media.url) }}" alt="{{ media.providerReference }}" title="{{ media.providerReference }}" />
+        <a href="{{ path('deletemedia', { 'id': media.id }) }}">remove media</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
