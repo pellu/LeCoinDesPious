@@ -3129,3 +3129,11 @@ input[type=checkbox].css-checkbox13:checked + label.css-label13 {
 	form.blogger textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
 	form.blogger input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
 	form.blogger ul li { color: #ff0000; margin-bottom: 5px; }
+
+}
+
+.avatar{
+	width: 100px;
+	height: 100px;
+	background: #000;
+}
