@@ -1,6 +1,4 @@
 {% block fos_user_content %}
-
-
     {% include "::header.html.twig" %}
         <form id="loginForm" action="{{ path("fos_user_security_check") }}" method="post">
             <fieldset>
@@ -22,7 +20,7 @@
                     <label id="checkbox" for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}<input type="checkbox" id="remember_me" name="_remember_me" value="on"/></label>
 
                     <input type="submit" id="login" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}">
-                    <label for="checkbox"><i><a href="">Mot de passe perdu ?</a></i></label>
+                    <label for="checkbox"><i><a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié</a></i></label>
                 </fieldset>
             </fieldset>
         </form><div class="clear"> </div>
