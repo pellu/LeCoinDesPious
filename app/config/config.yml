@@ -75,6 +75,7 @@ fos_user:
     firewall_name: main
     user_class: UserBundle\Entity\User
 
+<<<<<<< HEAD
     registration:
             form:
                 type: UserBundle\Form\RegistrationType
@@ -82,3 +83,6 @@ fos_user:
     profile:
             form:
                 type: UserBundle\Form\ProfileType
+=======
+# SimpleMediaBundle
+>>>>>>> fadcae914b224dd606e8d2dc79dbaab95a0a8c09

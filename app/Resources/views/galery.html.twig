@@ -1,0 +1,20 @@
+<!-- Related to an object -->
+<ul>
+    {% for media in medias(object) %}
+        <li><img src="{{ media.url }}" /></li>
+    {% endfor %}
+</ul>
+
+<!-- Related to an object filter on tags -->
+<ul>
+    {% for media in medias(object, ['tag']) %}
+        <li><img src="{{ media.url }}" /></li>
+    {% endfor %}
+</ul>
+
+<!-- Related to tags -->
+<ul>
+    {% for media in medias(null, ['tag1', 'tag2']) %}
+        <li><img src="{{ media.url }}" /></li>
+    {% endfor %}
+</ul>
