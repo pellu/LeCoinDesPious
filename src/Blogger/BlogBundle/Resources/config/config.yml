@@ -1,4 +1,4 @@
 # src/Blogger/BlogBundle/Resources/config/config.yml
 parameters:
     # Blogger contact email address
-    blogger_blog.emails.contact_email: jordanpelluard@gmail.com
+    blogger_blog.emails.contact_email: test@gmail.com
